@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
-import bodyBgGradient from "@/app/assets/images/body-bg-gradient.png";
+import PageHeader from "@/app/components/PageHeader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,13 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="absolute inset-0 bg-no-repeat bg-auto bg-right-top body-gr-bg z-0"></div>
-        <header className="w-full flex justify-start items-center p-4 relative z-10">
-          <span>Parallel Universe Archive</span>
-          <nav className="ms-auto flex justify-start items-center gap-2">
-            <Link href="/">Recommendations</Link>
-            <Link href="/queue">Queue to play </Link>
-          </nav>
-        </header>
+        <PageHeader />
         <main className="flex min-h-screen flex-col items-start justify-start px-4 py-12 relative z-10">
           {children}
         </main>
