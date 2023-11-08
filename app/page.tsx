@@ -1,27 +1,29 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
 import supabase from "@/configs/supabaseClient";
+import type { Game } from "@/types/supabase.types";
 
 import PageHero from "@/app/components/PageHero";
 import GameList from "@/app/components/GameList";
 
 export default function Home() {
-  const [games, setGames] = useState([]);
+  const [games, setGames] = useState<Game[]>([]);
 
   useEffect(() => {
-    getCountries();
+    getGames();
   }, []);
 
-  async function getCountries() {
-    const { data } = await supabase
+  async function getGames() {
+    const { data: fetchedGames } = await supabase
       .from("games")
       .select("*")
       .order("released", { ascending: false });
     // .match({ played: true })
 
-    setGames(data);
-    console.log(data);
+    setGames(fetchedGames || []);
+    console.log(fetchedGames);
   }
 
   return (

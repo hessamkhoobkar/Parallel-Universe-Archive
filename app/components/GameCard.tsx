@@ -3,14 +3,14 @@
 export default function GameCard({
   name,
   cover_image,
-  gameCall,
+  modalCall,
 }: {
   name: string;
   cover_image: string;
-  gameCall: () => void;
+  modalCall: () => void;
 }) {
   function handleClick() {
-    gameCall();
+    modalCall();
   }
 
   return (
