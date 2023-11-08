@@ -3,25 +3,51 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --color: #ffffff;
+  --background: #0a121f;
+  --card-background: #111e38;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --color: #ffffff;
+    --background: #0a121f;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: var(--color);
+  background: var(--background);
+}
+
+.card {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.13, 0.8, 0.52, 0.99);
+  background-color: var(--card-background);
+  overflow: hidden;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.3;
+  background: rgb(255, 255, 255);
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    21deg,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  transform: translateY(-100%);
+  transition: all 0.3s cubic-bezier(0.13, 0.8, 0.52, 0.99);
+}
+
+.card:hover {
+  z-index: 10;
+  transform: scale(1.1);
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.card:hover::after {
+  transform: translateY(0%);
 }
