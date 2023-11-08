@@ -12,6 +12,7 @@
   :root {
     --color: #ffffff;
     --background: #0a121f;
+    --card-background: #111e38;
   }
 }
 
@@ -50,4 +51,8 @@ body {
 
 .card:hover::after {
   transform: translateY(0%);
+}
+
+.body-gr-bg {
+  background-image: url("assets/images/body-bg-gradient.png");
 }
