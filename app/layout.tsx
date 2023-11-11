@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="absolute inset-0 bg-no-repeat bg-auto bg-right-top body-gr-bg z-0"></div>
         <PageHeader />
-        <main className="flex min-h-screen flex-col items-start justify-start px-4 py-12 relative z-10">
+        <main className="flex min-h-screen flex-col items-start justify-start px-12 py-12 relative z-10">
           {children}
         </main>
       </body>
