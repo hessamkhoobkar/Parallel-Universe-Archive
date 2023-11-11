@@ -6,6 +6,10 @@
   --color: #ffffff;
   --background: #0a121f;
   --card-background: #111e38;
+  --input-border: #111e38;
+  --input-background: #0a121f;
+  --input-placeholder: #64748b;
+  --input-border-focus: #0ea5e9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +17,10 @@
     --color: #ffffff;
     --background: #0a121f;
     --card-background: #111e38;
+    --input-border: #111e38;
+    --input-background: #0a121f;
+    --input-placeholder: #64748b;
+    --input-border-focus: #0ea5e9;
   }
 }
 
@@ -55,4 +63,33 @@ body {
 
 .body-gr-bg {
   background-image: url("assets/images/body-bg-gradient.png");
+}
+
+input,
+textarea,
+select {
+  border-width: 1px;
+  border-color: var(--input-border);
+  background-color: var(--input-background);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--input-border-focus);
+  outline: none;
+}
+
+input::placeholder {
+  opacity: 1;
+  color: var(--input-placeholder);
+}
+
+input::-ms-input-placeholder {
+  opacity: 1;
+  color: var(--input-placeholder);
+}
+
+.input-background {
+  background-color: var(--input-background);
 }
