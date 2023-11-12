@@ -5,11 +5,17 @@ import { useState } from "react";
 
 export default function GameListActoins({
   handleSearchInput,
+  handleSortChange,
 }: {
   handleSearchInput: (value: string) => void;
+  handleSortChange: (value: string) => void;
 }) {
   function handleChange(value: string) {
     handleSearchInput(value);
+  }
+
+  function handleSort(value: string) {
+    handleSortChange(value);
   }
 
   return (
@@ -57,8 +63,10 @@ export default function GameListActoins({
           name="sort"
           title="sortBy"
           className="py-3 px-4 pe-8 w-48 rounded-lg text-sm disabled:opacity-50 disabled:pointer-events-none"
+          onChange={(e) => handleSort(e.target.value)}
+          defaultValue="Release date"
         >
-          <option selected>Release date</option>
+          <option>Release date</option>
           <option>Alphabetical</option>
         </select>
       </div>
