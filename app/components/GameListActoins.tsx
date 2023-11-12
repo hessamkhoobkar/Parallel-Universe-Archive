@@ -38,7 +38,7 @@ export default function GameListActoins({
   }
 
   return (
-    <div className="w-full flex justify-start items-center gap-4 my-4">
+    <div className="w-full flex justify-start items-center gap-4 my-6">
       <div className="relative">
         <label htmlFor="search" className="sr-only">
           Search by titles of games
