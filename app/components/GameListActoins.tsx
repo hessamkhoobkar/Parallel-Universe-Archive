@@ -1,7 +1,13 @@
 "use client";
+import { useEffect, useState } from "react";
+
+import Select from "./Select";
 import { Search } from "@/app/assets/icons/Search";
-import { AngleDown } from "../assets/icons/AngleDown";
-import { useState } from "react";
+
+const options = [
+  { id: "01", label: "Release date", value: "release" },
+  { id: "02", label: "Alphabetical", value: "alphabetical" },
+];
 
 export default function GameListActoins({
   handleSearchInput,
@@ -10,12 +16,25 @@ export default function GameListActoins({
   handleSearchInput: (value: string) => void;
   handleSortChange: (value: string) => void;
 }) {
+  const [sortBy, setSortBy] = useState(options[0] || {});
+
   function handleChange(value: string) {
     handleSearchInput(value);
   }
 
-  function handleSort(value: string) {
-    handleSortChange(value);
+  useEffect(() => {
+    handleSortChange(sortBy.value);
+
+    return () => {
+      handleSortChange(sortBy.value);
+    };
+  }, [sortBy]);
+
+  function changeActiveOption(id: string) {
+    const newOption = options.find((option) => option.id === id);
+    if (newOption) {
+      setSortBy(newOption);
+    }
   }
 
   return (
@@ -34,41 +53,14 @@ export default function GameListActoins({
           placeholder="Search titles"
         />
       </div>
-      {/* <div className="relative">
-        <div className="absolute inset-y-2 right-1 input-background flex justify-center items-center pr-1">
-          <AngleDown className="text-2xl mt-1" />
-        </div>
-        <label htmlFor="genres" className="sr-only">
-          Search by titles of games
-        </label>
-        <select
-          id="genres"
-          name="genres"
-          title="genres"
-          className="py-3 px-4 pe-8 w-36 rounded-lg text-sm disabled:opacity-50 disabled:pointer-events-none"
-        >
-          <option selected>Genres</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-        </select>
-      </div> */}
+
       <div className="ms-auto relative flex justify-start items-center gap-4">
-        <div className="absolute inset-y-2 right-1 input-background flex justify-center items-center pr-1">
-          <AngleDown className="text-2xl mt-1" />
-        </div>
         <label htmlFor="sort">Sort by :</label>
-        <select
-          id="sort"
-          name="sort"
-          title="sortBy"
-          className="py-3 px-4 pe-8 w-48 rounded-lg text-sm disabled:opacity-50 disabled:pointer-events-none"
-          onChange={(e) => handleSort(e.target.value)}
-          defaultValue="Release date"
-        >
-          <option>Release date</option>
-          <option>Alphabetical</option>
-        </select>
+        <Select
+          label={sortBy.label}
+          options={options}
+          handleActiveOption={(id) => changeActiveOption(id)}
+        />
       </div>
     </div>
   );

@@ -48,14 +48,7 @@ export default function Home() {
   }
 
   function sortBy(sort: string) {
-    console.log(sort);
-
-    //   setCurrentGames([...currentGames].sort((a, b) => a.name.localeCompare(b.name)));
-    // } else if (sort === "Release Date") {
-    //   setCurrentGames([...currentGames].sort((a, b) => new Date(b.released).getTime() - new Date(a.released).getTime()));
-    // }
-
-    if (sort === "Alphabetical") {
+    if (sort === "alphabetical") {
       setCurrentGames(
         [...currentGames].sort((a, b) => {
           if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
@@ -63,7 +56,7 @@ export default function Home() {
           return 0;
         })
       );
-    } else if (sort === "Release date") {
+    } else if (sort === "release") {
       setCurrentGames(
         [...currentGames].sort((a, b) => {
           if (a.released < b.released) return 1;

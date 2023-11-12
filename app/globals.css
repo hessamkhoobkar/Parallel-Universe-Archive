@@ -67,7 +67,8 @@ body {
 
 input,
 textarea,
-select {
+select,
+.select {
   border-width: 1px;
   border-color: var(--input-border);
   background-color: var(--input-background);
@@ -75,7 +76,8 @@ select {
 
 input:focus,
 textarea:focus,
-select:focus {
+select:focus,
+.select:focus {
   border-color: var(--input-border-focus);
   outline: none;
 }
@@ -92,4 +94,8 @@ input::-ms-input-placeholder {
 
 .input-background {
   background-color: var(--input-background);
+}
+
+.select-options {
+  background-color: var(--card-background);
 }
