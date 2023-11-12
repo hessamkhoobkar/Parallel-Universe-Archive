@@ -10,6 +10,7 @@
   --input-background: #0a121f;
   --input-placeholder: #64748b;
   --input-border-focus: #0ea5e9;
+  --nav-background: #111e38;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +22,7 @@
     --input-background: #0a121f;
     --input-placeholder: #64748b;
     --input-border-focus: #0ea5e9;
+    --nav-background: #111e38;
   }
 }
 
@@ -98,4 +100,13 @@ input::-ms-input-placeholder {
 
 .select-options {
   background-color: var(--card-background);
+}
+
+.nav-group {
+  border-color: var(--input-border);
+  background-color: rgba(10, 18, 31, 0.6);
+}
+
+.nav-item.active {
+  background-color: var(--nav-background);
 }

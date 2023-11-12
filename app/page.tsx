@@ -72,10 +72,7 @@ export default function Home() {
       <PageHero
         title="My top 100 recommend video games"
         srOnly="parallel universe archive || My top 100 recommend video games"
-        description="I&lsquo;ve been fortunate to journey through countless virtual worlds,
-        where I&lsquo;ve discovered what feels like parallel universes brimming
-        with unique life experiences. Here, I present my top 100
-        recommendations, each a captivating realm for you to explore."
+        description="I have been lucky enough to explore numerous virtual worlds, where I&lsquo;ve had the opportunity to experience living in parallel universes that are full of unique and captivating life experiences. In this list, I present my top 100 recommendations for you to explore and indulge in these captivating realms."
       />
       {fetchLoading ? (
         <div className="w-full flex justify-center items-center">
