@@ -1,8 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Parallel Universe Archive
 
-## Getting Started
+Welcome to the Parallel Universe Archive, a showcase project highlighting my top 100 recommended video games. This project is a testament to my front-end development skills, utilizing technologies like Next.js, Tailwind CSS, and Supabase for the backend. Framer Motion has been employed to enhance the user experience with advanced animations and micro-interactions.
 
-First, run the development server:
+## Project Overview
+
+**Deployment:**
+The project is live and accessible at [here](https://parallel-universe-archive.vercel.app/).
+To run the development server inb your local environment:
+fork the project iunstall all the dependencies with `npm install` and run the development and server with
 
 ```bash
 npm run dev
@@ -16,21 +21,34 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Frontend
 
-## Learn More
+**Next.js:** A React framework for building server-side rendered and statically generated web applications.
+**Tailwind CSS:** A utility-first CSS framework for building modern and responsive designs.
+**Framer Motion:** Used for implementing advanced animations and micro-interactions.
 
-To learn more about Next.js, take a look at the following resources:
+### Backend
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Supabase:** A powerful open-source platform that combines the best features of databases and serverless functions for building applications.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## To-Dos
 
-## Deploy on Vercel
+- [ ] Implement Queue Page
+Create a dedicated page to manage and display the queue of selected video games. This feature will enhance user interaction and organization.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [ ] Global State for Data Fetching
+Enhance data fetching by integrating a global state management solution. This will improve the overall efficiency and maintainability of data retrieval.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [ ] Modularize and Separate Functions
+Refactor code to ensure functions are modular and well-separated. This will enhance code readability, maintainability, and make future enhancements easier.
+
+- [ ] Testing Implementation
+Introduce testing to the application to ensure its reliability and robustness. This includes unit testing for individual components and integration testing for overall functionality.
+
+## How to Contribute
+
+If you'd like to contribute to the Parallel Universe Archive project, feel free to fork the repository and submit a pull request with your proposed changes. Additionally, bug reports and feature requests are always welcome through the GitHub issues page.
+
+*Happy gaming, and enjoy exploring the Parallel Universe Archive!*
