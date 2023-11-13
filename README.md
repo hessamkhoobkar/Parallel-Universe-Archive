@@ -5,19 +5,9 @@ Welcome to the Parallel Universe Archive, a showcase project highlighting my top
 ## Project Overview
 
 **Deployment:**
-The project is live and accessible at [here](https://parallel-universe-archive.vercel.app/).
-To run the development server inb your local environment:
-fork the project iunstall all the dependencies with `npm install` and run the development and server with
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The project is live and accessible through my [website](https://khoobkar.com/) or at [here](https://parallel-universe-archive.vercel.app/).\
+To run the development server in your local environment:\
+fork the project install all the dependencies with `npm install` and run the development and server with `pnpm dev`.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -25,9 +15,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Frontend
 
-**Next.js:** A React framework for building server-side rendered and statically generated web applications.
-**Tailwind CSS:** A utility-first CSS framework for building modern and responsive designs.
-**Framer Motion:** Used for implementing advanced animations and micro-interactions.
+**Next.js:** A React framework for building server-side rendered and statically generated web applications.\
+**Tailwind CSS:** A utility-first CSS framework for building modern and responsive designs.\
+**Framer Motion:** Used for implementing advanced animations and micro-interactions.\
 
 ### Backend
 
@@ -36,7 +26,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## To-Dos
 
 - [ ] Implement Queue Page
-Create a dedicated page to manage and display the queue of selected video games. This feature will enhance user interaction and organization.
+Create a dedicated page to manage and display the queue of video games I'm yet to play. 
 
 - [ ] Global State for Data Fetching
 Enhance data fetching by integrating a global state management solution. This will improve the overall efficiency and maintainability of data retrieval.
