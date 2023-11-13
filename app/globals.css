@@ -110,3 +110,17 @@ input::-ms-input-placeholder {
 .nav-item.active {
   background-color: var(--nav-background);
 }
+
+.modal {
+  background-color: var(--card-background);
+  background: linear-gradient(
+      239deg,
+      rgba(51, 102, 255, 0.2) 8.18%,
+      rgba(51, 102, 255, 0) 69.92%
+    ),
+    #111e38;
+}
+
+.modal-close {
+  background-color: var(--card-background);
+}

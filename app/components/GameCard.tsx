@@ -28,6 +28,7 @@ export default function GameCard({
         ease: [0, 0.71, 0.2, 1.01],
       }}
       layout
+      layoutId={id}
     >
       <div
         onClick={handleClick}

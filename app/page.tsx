@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 import supabase from "@/configs/supabaseClient";
 import type { Game } from "@/types/supabase.types";
@@ -9,11 +10,13 @@ import PageHero from "@/app/components/PageHero";
 import GameList from "@/app/components/GameList";
 import GameListLoading from "@/app/components/GameListLoading";
 import GameListActoins from "@/app/components/GameListActoins";
+import Modal from "./components/Modal";
 
 export default function Home() {
   const [fetchLoading, setFetchLoading] = useState<boolean>(true);
   const [fetchedGames, setFetchedGames] = useState<Game[]>([]);
   const [currentGames, setCurrentGames] = useState<Game[]>([]);
+  const [selectedGame, setSelectedGame] = useState<Game | null>(null);
 
   async function getGames() {
     const { data: fetchedGames } = await supabase
@@ -84,9 +87,21 @@ export default function Home() {
             handleSearchInput={(searchValue) => filterBySearch(searchValue)}
             handleSortChange={(sortValue) => sortBy(sortValue)}
           />
-          <GameList games={currentGames} />
+          <GameList
+            games={currentGames}
+            handleGameSelect={(game) => setSelectedGame(game)}
+          />
         </>
       )}
+
+      <AnimatePresence>
+        {selectedGame && (
+          <Modal
+            selectedGame={selectedGame}
+            handleCloseCall={() => setSelectedGame(null)}
+          />
+        )}
+      </AnimatePresence>
     </>
   );
 }
