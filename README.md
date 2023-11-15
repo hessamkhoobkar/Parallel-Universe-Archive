@@ -26,7 +26,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## To-Dos
 
 - [ ] Implement Queue Page
-Create a dedicated page to manage and display the queue of video games I'm yet to play. 
+Create a dedicated page to manage and display the queue of video games I'm yet to play.
 
 - [ ] Global State for Data Fetching
 Enhance data fetching by integrating a global state management solution. This will improve the overall efficiency and maintainability of data retrieval.
@@ -36,6 +36,8 @@ Refactor code to ensure functions are modular and well-separated. This will enha
 
 - [ ] Testing Implementation
 Introduce testing to the application to ensure its reliability and robustness. This includes unit testing for individual components and integration testing for overall functionality.
+
+- [ ] Implement responsive design
 
 ## How to Contribute
 
