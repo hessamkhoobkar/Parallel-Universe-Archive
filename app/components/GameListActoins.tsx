@@ -38,8 +38,8 @@ export default function GameListActoins({
   }
 
   return (
-    <div className="w-full flex justify-start items-center gap-4 my-6">
-      <div className="relative">
+    <div className="w-full flex flex-col-reverse lg:flex-row justify-start items-center gap-4 my-6">
+      <div className="relative w-full lg:w-auto">
         <label htmlFor="search" className="sr-only">
           Search by titles of games
         </label>
@@ -49,13 +49,13 @@ export default function GameListActoins({
           id="search"
           name="search"
           onChange={(e) => handleChange(e.target.value)}
-          className="py-3 px-4 ps-12 block w-96 rounded-lg text-sm focus:border-sky-500 focus:ring-sky-500 disabled:opacity-50 disabled:pointer-events-none"
+          className="py-3 px-4 ps-12 block w-full lg:w-96 rounded-lg text-sm focus:border-sky-500 focus:ring-sky-500 disabled:opacity-50 disabled:pointer-events-none"
           placeholder="Search titles"
         />
       </div>
 
       <div className="ms-auto relative flex justify-start items-center gap-4">
-        <label htmlFor="sort">Sort by :</label>
+        <span>Sort by :</span>
         <Select
           label={sortBy.label}
           options={options}

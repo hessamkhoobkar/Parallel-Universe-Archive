@@ -38,10 +38,20 @@ export default function GameCard({
           <span className="text-slate-300 text-sm">{name}</span>
         </div>
 
-        <div
-          className="w-full rounded-lg aspect-w-6 aspect-h-9 bg-cover bg-center"
-          style={{ backgroundImage: `url(${cover_image})` }}
-        ></div>
+        <div className="w-full rounded-lg aspect-w-6 aspect-h-9 bg-cover bg-center">
+          <motion.img
+            layout
+            layoutId={`${name}${id}`}
+            transition={{
+              duration: 0.3,
+              delay: 0,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+            className="w-full"
+            src={cover_image}
+            alt={name}
+          />
+        </div>
       </div>
     </motion.div>
   );
