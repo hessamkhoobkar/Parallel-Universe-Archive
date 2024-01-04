@@ -17,27 +17,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 **Next.js:** A React framework for building server-side rendered and statically generated web applications.\
 **Tailwind CSS:** A utility-first CSS framework for building modern and responsive designs.\
-**Framer Motion:** Used for implementing advanced animations and micro-interactions.\
+**Framer Motion:** Used for implementing advanced animations and micro-interactions.
 
 ### Backend
 
 **Supabase:** A powerful open-source platform that combines the best features of databases and serverless functions for building applications.
-
-## To-Dos
-
-- [ ] Implement Queue Page\
-Create a dedicated page to manage and display the queue of video games I'm yet to play.
-
-- [ ] Global State for Data Fetching\
-Enhance data fetching by integrating a global state management solution. This will improve the overall efficiency and maintainability of data retrieval.
-
-- [ ] Modularize and Separate Functions\
-Refactor code to ensure functions are modular and well-separated. This will enhance code readability, maintainability, and make future enhancements easier.
-
-- [ ] Testing Implementation\
-Introduce testing to the application to ensure its reliability and robustness. This includes unit testing for individual components and integration testing for overall functionality.
-
-- [x] Implement responsive design
 
 ## How to Contribute
 
