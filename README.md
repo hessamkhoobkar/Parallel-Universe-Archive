@@ -65,6 +65,8 @@ Replace the placeholder values `******` with your actual respective account cred
 
 ### Running the Project
 
+The last step is to run the development server and view it locally on your machine. Start by entering the following command.
+
 ```
 pnpm dev
 ```
