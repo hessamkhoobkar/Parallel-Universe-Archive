@@ -17,7 +17,7 @@ Welcome to the Parallel Universe Archive, a showcase project highlighting my top
 **Tailwind CSS:** A utility-first CSS framework for building modern and responsive designs.\
 **Framer Motion:** Used for implementing advanced animations and micro-interactions.\
 **Supabase:** A powerful open-source platform that combines the best features of databases and serverless functions for building applications.\
-**Vercel:** A Frontend Cloud provides the developer experience and infrastructure to build, scale, and secure a faster, more personalized web.\
+**Vercel:** A Frontend Cloud provides the developer experience and infrastructure to build, scale, and secure a faster, more personalized web.
 
 ## Links
 
